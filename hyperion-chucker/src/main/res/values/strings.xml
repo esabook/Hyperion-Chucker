@@ -1,0 +1,5 @@
+<resources>
+    <public name="hchuck_chucker" type="string">Hyperion-Chucker</public>
+    <string name="hchuck_plugin_name">Chucker HTTP</string>
+    <string name="hchuck_plugin_subtitle">An in-app HTTP inspector for Android OkHttp clients.</string>
+</resources>

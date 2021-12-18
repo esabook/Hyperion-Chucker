@@ -1,19 +1,26 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
 
-apply plugin: 'kotlin-android-extensions'
-
 android {
-    compileSdkVersion 30
+    compileSdkVersion 31
     defaultConfig {
-        applicationId "com.commit451.hyperion.chuck.sample"
-        minSdkVersion 21
-        targetSdkVersion 30
+        applicationId "io.github.esabook.hyperion_chucker_sample"
+        minSdkVersion 26
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -23,13 +30,12 @@ android {
 }
 
 dependencies {
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.2.1'
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.4.0'
 
-    debugImplementation 'com.willowtreeapps.hyperion:hyperion-core:0.9.29'
-    debugImplementation project(':hyperion-chuck')
+    debugImplementation project(':hyperion-chucker')
+    releaseImplementation "com.github.chuckerteam.chucker:library-no-op:3.5.2"
 
-    releaseImplementation 'com.willowtreeapps.hyperion:hyperion-core-no-op:0.9.29'
-    releaseImplementation 'com.readystatesoftware.chuck:library-no-op:1.1.0'
+    debugImplementation 'com.willowtreeapps.hyperion:hyperion-core:0.9.34'
+    releaseImplementation 'com.willowtreeapps.hyperion:hyperion-core-no-op:0.9.34'
 }

@@ -1,1 +1,1 @@
-include ':app', ':hyperion-chuck'
+include ':app', ':hyperion-chucker'
