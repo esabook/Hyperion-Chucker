@@ -1,11 +1,10 @@
-# Hyperion-Chuck
-[Hyperion](https://github.com/willowtreeapps/Hyperion-Android) Plugin for [Chuck](https://github.com/jgilfelt/chuck)
-
-[![Build Status](https://travis-ci.org/Commit451/Hyperion-Chuck.svg?branch=master)](https://travis-ci.org/Commit451/Hyperion-Chuck) [![](https://jitpack.io/v/Commit451/Hyperion-Chuck.svg)](https://jitpack.io/#Commit451/Hyperion-Chuck)
+# Hyperion-Chucker
+[Hyperion](https://github.com/willowtreeapps/Hyperion-Android) Plugin for forked [Chucker](https://github.com/esabook/chucker)
 
 ## Usage
-First, follow the README to set up [Chuck](https://github.com/jgilfelt/chuck). Then, follow the README to set up [Hyperion](https://github.com/willowtreeapps/Hyperion-Android). Then, all you need to do is simply add the dependency:
+First, follow the README to set up [Chucker](https://github.com/esabook/chucker). Then, follow the README to set up [Hyperion](https://github.com/willowtreeapps/Hyperion-Android). Then, all you need to do is simply add the dependency:
 
+From:
 ```
 allprojects {
 	repositories {
@@ -14,12 +13,35 @@ allprojects {
 	}
 }
 ```
-and
+
+To:
+```
+allprojects {
+	repositories {
+		...
+		mavenCentral()
+	}
+}
+```
+
+
+and from:
 ```
 dependencies {
     debugImplementation 'com.github.Commit451:Hyperion-Chuck:latest.version.here'
 }
 ```
+
+To:
+```
+dependencies {
+    debugImplementation 'io.github.esabook:hyperion-chucker:2.0.0'
+    
+    //optional
+    releaseImplementation "com.github.chuckerteam.chucker:library-no-op:3.5.2"
+}
+```
+
 Hyperion will then find the plugin and add it to the list when you open the Hyperion drawer.
 
 ## Icon
