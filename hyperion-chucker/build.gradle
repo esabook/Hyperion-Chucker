@@ -42,6 +42,25 @@ dependencies {
 
 
 publishing {
+    repositories {
+        maven {
+            name "snapshot"
+            url = "https://s01.oss.sonatype.org/content/repositories/snapshots"
+            credentials {
+                username = findProperty("NEXUS_USERNAME")
+                password = findProperty("NEXUS_PASSWORD")
+            }
+        }
+        maven {
+            name "staging"
+            url = "https://s01.oss.sonatype.org/content/groups/staging"
+            credentials {
+                username = findProperty("NEXUS_USERNAME")
+                password = findProperty("NEXUS_PASSWORD")
+            }
+        }
+    }
+
     publications {
         release(MavenPublication) {
             pom {
