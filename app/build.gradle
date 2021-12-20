@@ -7,8 +7,8 @@ android {
         applicationId "io.github.esabook.hyperion_chucker_sample"
         minSdkVersion 26
         targetSdkVersion 31
-        versionCode 1
-        versionName "1.0"
+        versionCode findProperty("build.versionCode") as Integer
+        versionName findProperty("build.versionName")
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
