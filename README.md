@@ -1,44 +1,33 @@
 # Hyperion-Chucker
 [Hyperion](https://github.com/willowtreeapps/Hyperion-Android) Plugin for forked [Chucker](https://github.com/esabook/chucker)
 
+
+![Overview](asset/hchuck_overview.gif)
+
 ## Usage
 First, follow the README to set up [Chucker](https://github.com/esabook/chucker). Then, follow the README to set up [Hyperion](https://github.com/willowtreeapps/Hyperion-Android). Then, all you need to do is simply add the dependency:
 
-From:
-```
-allprojects {
-	repositories {
-		...
-		maven { url "https://jitpack.io" }
-	}
-}
-```
-
-To:
 ```
 allprojects {
 	repositories {
 		...
 		mavenCentral()
+		// or my latest development snapshot
+		maven { url "https://s01.oss.sonatype.org/content/repositories/snapshots" }
 	}
 }
 ```
 
 
-and from:
-```
-dependencies {
-    debugImplementation 'com.github.Commit451:Hyperion-Chuck:latest.version.here'
-}
-```
-
-To:
 ```
 dependencies {
     debugImplementation 'io.github.esabook:hyperion-chucker:2.0.0'
     
+    // or my latest development snapshot
+    debugImplementation 'io.github.esabook:hyperion-chucker:2.0.1-SNAPSHOT'
+    
     //optional
-    releaseImplementation "com.github.chuckerteam.chucker:library-no-op:3.5.2"
+    releaseImplementation "com.github.chuckerteam.chucker:library-no-op:latest.version.number"
 }
 ```
 

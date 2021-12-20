@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 override fun onResponse(call: Call, response: Response) {
-                    response.body()?.string()
+                    response.body?.string()
                 }
             })
 
