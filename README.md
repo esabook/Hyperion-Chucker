@@ -10,10 +10,7 @@ First, follow the README to set up [Chucker](https://github.com/esabook/chucker)
 ```
 allprojects {
 	repositories {
-		...
 		mavenCentral()
-		// or my latest development snapshot
-		maven { url "https://s01.oss.sonatype.org/content/repositories/snapshots" }
 	}
 }
 ```
@@ -22,12 +19,6 @@ allprojects {
 ```
 dependencies {
     debugImplementation 'io.github.esabook:hyperion-chucker:2.0.0'
-    
-    // or my latest development snapshot
-    debugImplementation 'io.github.esabook:hyperion-chucker:2.0.1-SNAPSHOT'
-    
-    //optional
-    releaseImplementation "com.github.chuckerteam.chucker:library-no-op:latest.version.number"
 }
 ```
 
