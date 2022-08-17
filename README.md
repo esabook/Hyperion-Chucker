@@ -15,10 +15,10 @@ allprojects {
 }
 ```
 
-
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.esabook/hyperion-chucker)](https://search.maven.org/artifact/io.github.esabook/hyperion-chucker)
 ```
 dependencies {
-    debugImplementation 'io.github.esabook:hyperion-chucker:2.0.0'
+    debugImplementation 'io.github.esabook:hyperion-chucker:2.0.1'
 }
 ```
 
